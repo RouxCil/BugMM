@@ -6,20 +6,15 @@
 
 parameters 
 {
-	//EN Starting population size
-	int		StartingPopulationSize;
-	/* NOTE(StartingPopulationSize, EN)
-		The population size may increase or decrease during the simulation.
-	*/
-
-	//EN Annual hazard of death
-	double MortalityHazard;
-	/* NOTE(MortalityHazard, EN)
-		A constant hazard of death results in an exponential
-		survival function.
-	*/
+	int		StartingPopulationSize; //EN Starting population size
+	double PropFemale; //EN Proportion of females
 };
 
+classification GENDER
+{
+	FEMALE,
+	MALE
+};
 
 actor_set TsetseFly asAllTsetseFly; //EN All TsetseFly actors
 
@@ -59,7 +54,7 @@ actor TsetseFly            //EN Individual
 		Since the numeric value of TRUE is 1 and FALSE is 0, this variable
 		can also be used to count actors in tables.
 	*/
-
+	GENDER gender = (RandUniform(2)>PropFemale) ? MALE:FEMALE;
 
 	
 	event timeMortalityEvent, MortalityEvent;	//EN Mortality event
@@ -71,30 +66,6 @@ actor TsetseFly            //EN Individual
 	void Finish();
 };
 
-/*NOTE(TsetseFly.MortalityEvent, EN)
-	This event implements a constant hazard of death.
-*/
-
-// The time function of MortalityEvent
-TIME TsetseFly::timeMortalityEvent()
-{
-	TIME tEventTime = TIME_INFINITE;
-
-	// Draw a random waiting time to death from an exponential distribution
-	// based on the constant hazard MortalityHazard.
-	tEventTime = WAIT( - TIME( log( RandUniform(1) ) / MortalityHazard ) );
-
-	return tEventTime;
-}
-
-// The implement function of MortalityEvent
-void TsetseFly::MortalityEvent()
-{
-	alive = FALSE;
-
-	// Remove the actor from the simulation.
-	Finish();
-}
 
 /*NOTE(TsetseFly.Start, EN)
 	The Start function initializes actor variables before simulation
@@ -107,7 +78,7 @@ void TsetseFly::Start()
 
 	age = 0;
 	time = 0;
-
+	
 	// After the code in this function is executed,
 	// Modgen initializes events and tables for the actor.
 	// Modgen also outputs starting values to the tracking file if requested.
@@ -128,11 +99,12 @@ void TsetseFly::Finish()
 */
 table TsetseFly DurationOfLife //EN Duration of Life
 {
+	gender*
 	{
 		value_in(alive),				//EN Population size
 		min_value_out(duration()),		//EN Minimum duration of life decimals=4
 		max_value_out(duration()),		//EN Maximum duration of life decimals=4
 		duration() / value_in(alive)	//EN Life expectancy decimals=4
 
-	}	//EN Demographic characteristics
+	} //EN Demographic characteristics
 };

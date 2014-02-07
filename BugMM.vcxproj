@@ -101,6 +101,7 @@
     <None Include="Common.mpp" />
     <None Include="Experimental.mpp" />
     <None Include="ModelStrings.mpp" />
+    <None Include="Mortality.mpp" />
     <None Include="parse.inf" />
     <None Include="ReadMe.txt" />
     <None Include="TickerCore.mpp" />
@@ -112,6 +113,8 @@
     <ClCompile Include="Common.cpp" />
     <ClCompile Include="Experimental.cpp" />
     <ClCompile Include="ModelStrings.cpp" />
+    <ClCompile Include="ModgenEmptyModuleVide.cpp" />
+    <ClCompile Include="Mortality.cpp" />
     <ClCompile Include="Tabinit.cpp" />
     <ClCompile Include="TickerCore.cpp" />
     <ClCompile Include="TsetseFlyCore.cpp" />

@@ -1,0 +1,39 @@
+/*Roux-Cil
+This function should be generalised to consider:
+age,
+temperature effect on mortality*/
+parameters
+{
+	double MortalityHazard; // Daily hazard of death
+};
+
+range LIFE
+{
+	0,90 // Age range in days 
+};
+
+// The time function of MortalityEvent
+TIME TsetseFly::timeMortalityEvent()
+{
+	TIME tEventTime = TIME_INFINITE;
+
+	// Draw a random waiting time to death from an exponential distribution
+	// based on the constant hazard MortalityHazard.
+	tEventTime = WAIT( - TIME( log( RandUniform(1) ) / MortalityHazard ) );
+	
+	// No survivors past maximum life
+	if(tEventTime > MAX(LIFE)) 
+	{
+		tEventTime=MAX(LIFE);
+	};
+	return tEventTime;
+}
+
+// The implement function of MortalityEvent
+void TsetseFly::MortalityEvent()
+{
+	alive = FALSE;
+
+	Finish(); // Remove the actor from the simulation.
+}
+

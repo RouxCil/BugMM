@@ -44,6 +44,9 @@
     <None Include="Experimental.mpp">
       <Filter>Modules %28mpp%29</Filter>
     </None>
+    <None Include="Mortality.mpp">
+      <Filter>Modules %28mpp%29</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BugMM.cpp">
@@ -68,6 +71,12 @@
       <Filter>C++ Files</Filter>
     </ClCompile>
     <ClCompile Include="Experimental.cpp">
+      <Filter>C++ Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ModgenEmptyModuleVide.cpp">
+      <Filter>C++ Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mortality.cpp">
       <Filter>C++ Files</Filter>
     </ClCompile>
   </ItemGroup>
