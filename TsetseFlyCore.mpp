@@ -105,7 +105,7 @@ void TsetseFly::Start()
 	// Modgen initializes all actor variables
 	// before the code in this function is executed.
 
-	age = RandUniform(2)*10;
+	age = 0;
 	time = 0;
 
 	// After the code in this function is executed,
