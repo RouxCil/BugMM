@@ -1,0 +1,17 @@
+table TsetseFly PopulationWithoutTotal //EN Population without totals
+{
+	{
+		duration()
+	}
+	* days_lived // Age
+	* day_number //EN day
+};
+
+table TsetseFly PopulationWithTotal //En Population with totals
+{
+	{
+		duration()
+	}
+	*days_lived+ //EN Age
+	*day_number //EN Day
+};

@@ -1,0 +1,16 @@
+*.CPP
+*.H
+*.h
+*.swp
+*.txt
+*.mdb
+*.exe
+*.sdf
+*.suo
+*.ilk
+*.pdb
+Debug/*
+*.RC
+*.htm
+*INF
+*.ico

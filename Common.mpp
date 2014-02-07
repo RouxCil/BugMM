@@ -1,0 +1,9 @@
+range DAY_NUMBER
+{
+	0,200
+};
+
+range AGE
+{
+	0,30
+};
