@@ -1,7 +1,10 @@
-parameters 
-{
-	double MortalityHazard=.014; // Daily hazard of death
+parameters {
+
+	 //EN Daily hazard of death
+	double	MortalityHazard[GENDER] = {
+		0.010, .014, 
+	};
 	int	StartingPopulationSize = 500; //EN Starting population size
-	double PropFemale = 0.5; //EN Proportion of females
+	double	PropFemale = 0.3; //EN Proportion of females
 };
 

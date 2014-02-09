@@ -113,7 +113,6 @@
     <ClCompile Include="Common.cpp" />
     <ClCompile Include="Experimental.cpp" />
     <ClCompile Include="ModelStrings.cpp" />
-    <ClCompile Include="ModgenEmptyModuleVide.cpp" />
     <ClCompile Include="Mortality.cpp" />
     <ClCompile Include="Tabinit.cpp" />
     <ClCompile Include="TickerCore.cpp" />

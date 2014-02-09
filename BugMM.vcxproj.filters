@@ -73,9 +73,6 @@
     <ClCompile Include="Experimental.cpp">
       <Filter>C++ Files</Filter>
     </ClCompile>
-    <ClCompile Include="ModgenEmptyModuleVide.cpp">
-      <Filter>C++ Files</Filter>
-    </ClCompile>
     <ClCompile Include="Mortality.cpp">
       <Filter>C++ Files</Filter>
     </ClCompile>
