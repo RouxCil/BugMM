@@ -4,7 +4,7 @@ age,
 temperature effect on mortality*/
 parameters
 {
-	double MortalityHazard[GENDER]; // Daily hazard of death
+	double MortalityHazard[LIFESTAGE]; // Daily hazard of death
 };
 
 range LIFE
@@ -19,7 +19,7 @@ TIME TsetseFly::timeMortalityEvent()
 
 	// Draw a random waiting time to death from an exponential distribution
 	// based on the constant hazard MortalityHazard.
-	tEventTime = WAIT( - TIME( log( RandUniform(1) ) / MortalityHazard[gender] ) );
+	tEventTime = WAIT( - TIME( log( RandUniform(1) ) / MortalityHazard[lifestage] ) );
 	
 	// No survivors past maximum life
 	if(tEventTime > MAX(LIFE)) 

@@ -1,9 +1,7 @@
 parameters {
 
 	 //EN Daily hazard of death
-	double	MortalityHazard[GENDER] = {
-		0.010, .014, 
-	};
+	double	MortalityHazard[LIFESTAGE] = {0.009,0.014, .010}; // PUPA MALE FEMALE
 	int	StartingPopulationSize = 500; //EN Starting population size
 	double	PropFemale = 0.3; //EN Proportion of females
 };

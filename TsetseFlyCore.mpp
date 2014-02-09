@@ -10,10 +10,11 @@ parameters
 	double PropFemale; //EN Proportion of females
 };
 
-classification GENDER
+classification LIFESTAGE
 {
-	FEMALE,
-	MALE
+	PUPA,
+	MALE,
+	FEMALE
 };
 
 actor_set TsetseFly asAllTsetseFly; //EN All TsetseFly actors
@@ -54,8 +55,7 @@ actor TsetseFly            //EN Individual
 		Since the numeric value of TRUE is 1 and FALSE is 0, this variable
 		can also be used to count actors in tables.
 	*/
-	GENDER gender = (RandUniform(2)>PropFemale) ? MALE:FEMALE;
-
+	LIFESTAGE lifestage; //EN Life stage
 	
 	event timeMortalityEvent, MortalityEvent;	//EN Mortality event
 
@@ -78,7 +78,7 @@ void TsetseFly::Start()
 
 	age = 0;
 	time = 0;
-	
+	lifestage = (RandUniform(2)>PropFemale) ? MALE:FEMALE;
 	// After the code in this function is executed,
 	// Modgen initializes events and tables for the actor.
 	// Modgen also outputs starting values to the tracking file if requested.
@@ -99,7 +99,7 @@ void TsetseFly::Finish()
 */
 table TsetseFly DurationOfLife //EN Duration of Life
 {
-	gender*
+	lifestage*
 	{
 		value_in(alive),				//EN Population size
 		min_value_out(duration()),		//EN Minimum duration of life decimals=4
