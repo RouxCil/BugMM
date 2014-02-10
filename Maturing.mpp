@@ -1,0 +1,19 @@
+actor TsetseFly
+{
+	event timeMaturingEvent, MaturingEvent;
+};
+
+TIME TsetseFly::timeMaturingEvent()
+{
+	TIME tEventTime = TIME_INFINITE;
+	if (lifestage==PUPA)
+	{
+		tEventTime = WAIT(27);
+	}
+	return tEventTime;
+}
+
+void TsetseFly::MaturingEvent()
+{
+	lifestage = (RandUniform(2)>PropFemale) ? MALE:FEMALE;
+}
