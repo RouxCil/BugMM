@@ -97,7 +97,6 @@
     <None Include="app.ico" />
     <None Include="Base(TsetseFlyCore).dat" />
     <None Include="Base.scex" />
-    <None Include="Birth.mpp" />
     <None Include="BugMM.mpp" />
     <None Include="Common.mpp" />
     <None Include="Experimental.mpp" />
@@ -111,7 +110,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Actors.cpp" />
-    <ClCompile Include="Birth.cpp" />
     <ClCompile Include="BugMM.cpp" />
     <ClCompile Include="Common.cpp" />
     <ClCompile Include="Experimental.cpp" />
