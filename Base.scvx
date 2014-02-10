@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ScenarioView>
 	<General Language="EN" LongNames="1" SortedGroups="0" Parsed="1" MaximizeChild="0"></General>
-	<TreeView GroupView="0" Type="410">PopulationWithTotal</TreeView>
+	<TreeView GroupView="0" Type="418">StartingPopulationSize</TreeView>
 	<TreeExpansions>
 		<TreeExpansion>PARAMETER_FILES|TsetseFlyCore</TreeExpansion>
 		<TreeExpansion>TABLES</TreeExpansion>
