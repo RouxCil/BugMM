@@ -7,11 +7,6 @@ parameters
 	double MortalityHazard[LIFESTAGE]; // Daily hazard of death
 };
 
-range LIFE
-{
-	0,90 // Age range in days 
-};
-
 // The time function of MortalityEvent
 TIME TsetseFly::timeMortalityEvent()
 {
@@ -21,11 +16,6 @@ TIME TsetseFly::timeMortalityEvent()
 	// based on the constant hazard MortalityHazard.
 	tEventTime = WAIT( - TIME( log( RandUniform(1) ) / MortalityHazard[lifestage] ) );
 	
-	// No survivors past maximum life
-	if(tEventTime > MAX(LIFE)) 
-	{
-		tEventTime=MAX(LIFE);
-	};
 	return tEventTime;
 }
 

@@ -77,7 +77,6 @@ void TsetseFly::Start()
 	// before the code in this function is executed.
 
 	age = 0;
-	time = 0;
 	
 	// After the code in this function is executed,
 	// Modgen initializes events and tables for the actor.

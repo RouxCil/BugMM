@@ -50,6 +50,9 @@
     <None Include="Maturing.mpp">
       <Filter>Modules %28mpp%29</Filter>
     </None>
+    <None Include="Birth.mpp">
+      <Filter>Modules %28mpp%29</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BugMM.cpp">
@@ -80,6 +83,9 @@
       <Filter>C++ Files</Filter>
     </ClCompile>
     <ClCompile Include="Maturing.cpp">
+      <Filter>C++ Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Birth.cpp">
       <Filter>C++ Files</Filter>
     </ClCompile>
   </ItemGroup>
