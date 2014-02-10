@@ -20,12 +20,7 @@ TIME TsetseFly::timeMortalityEvent()
 	// Draw a random waiting time to death from an exponential distribution
 	// based on the constant hazard MortalityHazard.
 	tEventTime = WAIT( - TIME( log( RandUniform(1) ) / MortalityHazard[lifestage] ) );
-	
-	// No survivors past maximum life
-	if(tEventTime > MAX(LIFE)) 
-	{
-		tEventTime=MAX(LIFE);
-	};
+
 	return tEventTime;
 }
 
