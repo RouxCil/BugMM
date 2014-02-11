@@ -12,12 +12,12 @@
 	</ParameterSymbols>
 	<ExportGeneral NoSE="1" NoCV="1" TableType="EXCEL_PIVOT" Sparse="0" Lines="66"></ExportGeneral>
 	<ExportSubSamples>
-		<ExportSubSample Value="1">0</ExportSubSample>
-		<ExportSubSample Value="1">1</ExportSubSample>
-		<ExportSubSample Value="1">2</ExportSubSample>
-		<ExportSubSample Value="1">3</ExportSubSample>
-		<ExportSubSample Value="1">4</ExportSubSample>
-		<ExportSubSample Value="1">5</ExportSubSample>
+		<ExportSubSample Value="0">0</ExportSubSample>
+		<ExportSubSample Value="0">1</ExportSubSample>
+		<ExportSubSample Value="0">2</ExportSubSample>
+		<ExportSubSample Value="0">3</ExportSubSample>
+		<ExportSubSample Value="0">4</ExportSubSample>
+		<ExportSubSample Value="0">5</ExportSubSample>
 		<ExportSubSample Value="0">6</ExportSubSample>
 		<ExportSubSample Value="0">7</ExportSubSample>
 		<ExportSubSample Value="0">8</ExportSubSample>
@@ -30,8 +30,8 @@
 		<ExportSubSample Value="0">15</ExportSubSample>
 	</ExportSubSamples>
 	<ExportTables>
-		<ExportTable Present="0">DurationOfLife</ExportTable>
-		<ExportTable Present="0">PopulationWithoutTotal</ExportTable>
+		<ExportTable Present="1">DurationOfLife</ExportTable>
+		<ExportTable Present="1">PopulationWithoutTotal</ExportTable>
 		<ExportTable Present="1">PopulationWithTotal</ExportTable>
 	</ExportTables>
 </ScenarioView>

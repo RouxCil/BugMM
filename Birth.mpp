@@ -1,3 +1,7 @@
+parameters
+{
+	double interlarvalPeriod;
+};
 classification PREGNANCY
 {
 	FIRSTPREGNANCY,
@@ -6,6 +10,7 @@ classification PREGNANCY
 
 actor TsetseFly
 {
+	int firstOvulation = 7;
 	PREGNANCY pregnancy = {FIRSTPREGNANCY};
 	event timeBirthEvent, BirthEvent;
 };
@@ -17,11 +22,11 @@ TIME TsetseFly::timeBirthEvent()
 	{
 		if (pregnancy==FIRSTPREGNANCY)
 		{
-			tEventTime = WAIT(16);
+			tEventTime = WAIT(firstOvulation+interlarvalPeriod);
 		}
 		if (pregnancy==SUBSEQUENTPREGNANCY)
 		{
-			tEventTime = WAIT(9);
+			tEventTime = WAIT(interlarvalPeriod);
 		}
 	}
 	return tEventTime;

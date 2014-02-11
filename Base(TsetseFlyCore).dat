@@ -6,5 +6,7 @@ parameters {
 	};
 	int	StartingPopulationSize = 2000; //EN Starting population size
 	double	PropFemale = 0.5; //EN Proportion of females
+	double interlarvalPeriod = 9;
+	double puparialDuration = 27;
 };
 

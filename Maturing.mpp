@@ -1,3 +1,7 @@
+parameters
+{
+	double puparialDuration;
+};
 actor TsetseFly
 {
 	event timeMaturingEvent, MaturingEvent;
@@ -8,7 +12,7 @@ TIME TsetseFly::timeMaturingEvent()
 	TIME tEventTime = TIME_INFINITE;
 	if (lifestage==PUPA)
 	{
-		tEventTime = WAIT(27);
+		tEventTime = WAIT(puparialDuration);
 	}
 	return tEventTime;
 }
