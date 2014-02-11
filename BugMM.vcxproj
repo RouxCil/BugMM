@@ -107,6 +107,7 @@
     <None Include="parse.inf" />
     <None Include="ReadMe.txt" />
     <None Include="TickerCore.mpp" />
+    <None Include="Tracking.mpp" />
     <None Include="TsetseFlyCore.mpp" />
   </ItemGroup>
   <ItemGroup>
@@ -120,6 +121,7 @@
     <ClCompile Include="Mortality.cpp" />
     <ClCompile Include="Tabinit.cpp" />
     <ClCompile Include="TickerCore.cpp" />
+    <ClCompile Include="Tracking.cpp" />
     <ClCompile Include="TsetseFlyCore.cpp" />
   </ItemGroup>
   <ItemGroup>
